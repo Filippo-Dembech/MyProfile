@@ -17,5 +17,10 @@ Inside the `profile.ps1` script are defined the `Get-Homepage` function and its 
 This command is automatically run when the `profile.ps1` script run and it gives you the ability to access the homepage interface whenever you want.
 
 
+## Custom Scripts
+
+When the `profile.ps1` script runs at start-up all the scripts saved in the `C:\Program Files\PowerShell\my_profile\scripts` folder are _dot sourced_ automatically. In this way all the functions, aliases and variables defined in those scripts will be automatically loaded into the session.
+
+
 ## NOTES
 - Currently the options are hard-coded and the client has to add them to the `$unsortedOptions` variable and use the `Option` class which accepts a description of the option, a list of shortcuts that will be shown near the option description and a scriptblock with the code to execute when the option is selected. This hard-coded solution will be replaced by a more flexible one in the future.
